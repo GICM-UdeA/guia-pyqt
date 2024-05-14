@@ -82,9 +82,9 @@ Para desarrollar la aplicación, debes tener en cuenta las siguientes pautas [^1
 > [!Note]
 > Aunque la gran cantidad de widgets y señales son más que suficientes para la mayoría de las aplicaciones, a veces se requieren objetos más personalizados. Con PyQt, esto no es un gran problema, ya que siempre se pueden crear widgets personalizados heredando las propiedades de los predefinidos, o directamente de `QWidget`. También se pueden usar las clases disponibles en `QtCore`.
 
-3. La ejecución del bucle principal se da en un hilo específico (hilo principal de la GUI, etc.). En ocasiones, cuando la respuesta a las acciones de los usuarios requiere largos tiempos de procesamiento, para evitar que se congele la interfaz mientras se ejecutan las tareas, se puede recurrir a hilos adicionales para ejecutarlas en segundo plano sin bloquear la interfaz de usuario principal. Esto se puede hacer utilizando la clase `QThread` para crear y administrar hilos.
+3. La ejecución del bucle principal se da en un hilo principal (Thread GUI, main Thread, etc.). En ocasiones, cuando la respuesta a las acciones de los usuarios requiere largos tiempos de procesamiento, para evitar que se congele la interfaz mientras se ejecutan las tareas, se puede recurrir a hilos adicionales para ejecutarlas en segundo plano sin bloquear la interfaz de usuario principal. Esto se puede hacer utilizando la clase `QThread` para crear y administrar hilos. Revisar el 5 enlace del [material](####Enlaces) que se dejó al final. 
 
-4. El uso de Qt Designer es muy recomendado. Esta herramienta disminuirá mucho el tiempo de desarrollo y la cantidad de código necesario para tener aplicaciones de calidad. El archivo `.ui` que se obtiene de Qt Designer, como se dijo antes, puede transformarse en código de Python usando:
+4. El uso de Qt Designer es más que recomendado. Esta herramienta disminuirá mucho el tiempo de desarrollo y la cantidad de código necesario para tener aplicaciones de calidad. El archivo `.ui` que se obtiene de Qt Designer, como se dijo antes, puede transformarse en código de Python usando:
 
     ```bash
     pyuic5 -x <nombre_archivo_ui> -o <nombre_archivo_py>
@@ -107,7 +107,7 @@ Para desarrollar la aplicación, debes tener en cuenta las siguientes pautas [^1
     >>> import PyQt5.QtWidgets
     >>> print(PyQt5.QtWidgets.QStyleFactory.keys())
     ['windows11', 'windowsvista', 'Windows', 'Fusion']
-
+   ```
 
     Por otro lado, si optas por la personalización manual, hay que tener en cuenta la sintaxis del style sheet de Qt (QSS), que, aunque es similar a CSS, no es igual, principalmente porque es más limitado. Aquí, las reglas de estilo se componen de un selector y una declaración. El selector especifica qué widgets son afectados por la regla; la declaración especifica qué propiedades deben establecerse en el widget. Por ejemplo:
 
@@ -143,12 +143,12 @@ Para desarrollar la aplicación, debes tener en cuenta las siguientes pautas [^1
 Claramente, lo que se discutió anteriormente son solo las generalidades más importantes a considerar para la creación de aplicaciones gráficas de usuario (GUI) con PyQt. Sin embargo, se debe explorar las herramientas según las necesidad y debe tratar de entender la dinámica del desarrollo con PyQt a través de la práctica. Aquí dejo algunos enlaces interesantes para revisar y, claramente, también encontrará el material que se usó para el seminario de GICM y la grabación del mismo para que pueda comenzar a desarrollar aplicaciones con un contexto más claro.
 
 #### Enlaces:
-* [RoadMap](https://explorer.globe.engineer/search?qd=%5B%7B%22searchbox_query%22%3A%22PyQt%22%2C%22search_id%22%3A%225457fdd0-66f4-4551-b015-c9bbe8b3feb6%22%2C%22index%22%3A0%2C%22type%22%3A%22initial_searchbox%22%2C%22clicked_category%22%3Anull%2C%22staged_image%22%3Anull%7D%5D&sid=5457fdd0-66f4-4551-b015-c9bbe8b3feb6) completo para aprender PyQt. Generado con [esta IA](https://explorer.globe.engineer/).
-* [Documentación](https://doc.qt.io/) oficial de Qt.
-* Python and PyQt: Building a GUI Desktop Calculator[^1].
-* Qt Designer and Python: Build Your GUI Applications Faster[^2].
-* Use PyQt's QThread to Prevent Freezing GUIs, [link](https://realpython.com/python-pyqt-qthread/).
-* Graficación con MATPLOTLIB y PyQt. [link](https://www.pythonguis.com/tutorials/plotting-matplotlib/).
+1. [RoadMap](https://explorer.globe.engineer/search?qd=%5B%7B%22searchbox_query%22%3A%22PyQt%22%2C%22search_id%22%3A%225457fdd0-66f4-4551-b015-c9bbe8b3feb6%22%2C%22index%22%3A0%2C%22type%22%3A%22initial_searchbox%22%2C%22clicked_category%22%3Anull%2C%22staged_image%22%3Anull%7D%5D&sid=5457fdd0-66f4-4551-b015-c9bbe8b3feb6) completo para aprender PyQt. Generado con [esta IA](https://explorer.globe.engineer/).
+2. [Documentación](https://doc.qt.io/) oficial de Qt.
+3. Python and PyQt: Building a GUI Desktop Calculator[^1].
+4. Qt Designer and Python: Build Your GUI Applications Faster[^2].
+5. Use PyQt's QThread to Prevent Freezing GUIs, [link](https://realpython.com/python-pyqt-qthread/).
+6. Graficación con MATPLOTLIB y PyQt. [link](https://www.pythonguis.com/tutorials/plotting-matplotlib/).
 
 [^1]:  Leodanis Pozo Ramos, Python and PyQt: Building a GUI Desktop Calculator. 2022. [link](https://realpython.com/python-pyqt-gui-calculator/)
 
