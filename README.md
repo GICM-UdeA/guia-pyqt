@@ -26,7 +26,7 @@ Si prefiere usar PyQt6, simplemente reemplace "pyqt5" con "pyqt6" en el comando 
 
 Luego de haber instalado el paquete, puede usarlo para desarrollar su aplicación, a continuación se muestra un ejemplo sencillo (el código fuente lo encuentra en [code/getting_started_1.py](./code/getting_started_1.py)).
 
-<img src="img/getting_started_gui1.png" width="300x">
+<img src="img/getting_started_gui1.png" width="500x">
 
 #### Qt Designer 
 Esta es una herramienta que permite diseñar interfaces de usuario de forma visual de la forma conocida como *what-you-see-is-what-you-get* (WYSIWYG). Aunque no es necesario para trabajar con PyQt, puede acelerar significativamente el tiempo de desarrollo al permitirte crear interfaces de usuario de manera más eficiente simplemente arrastrando y soltando los diferentes widgets (*drag-and-drop*).[^2]
@@ -42,7 +42,7 @@ pip install pyqt5-tools
 ```
 Una vez instalado, se puede lanzar la aplicación por linea de commandos con la sentencia `designer`, o se puede buscar el ejecutable en la ruta donde se instalo (que debería ser algo como: Windows: `...Lib\site-packages\pyqt5_tools\designer.exe`; Linux: `...lib/python3.x/site-packages/qt5_applications/Qt/bin/designer`) [^2]. Esto abrira una interfaz como esta:
 
-<img src="https://i.vimeocdn.com/video/1034866213-2f5de27584de664a9b0734c6caebb841ba79dbad36ea741da7605e613bfc76d8-d?mw=1100&mh=619&q=70" width="400x">
+<img src="https://i.vimeocdn.com/video/1034866213-2f5de27584de664a9b0734c6caebb841ba79dbad36ea741da7605e613bfc76d8-d?mw=1100&mh=619&q=70" width="600x">
 
 ## ¿Cómo desarrollar la interfaz?
 
@@ -79,8 +79,8 @@ Para desarrollar la aplicación, debes tener en cuenta las siguientes pautas [^1
    - Una señal se puede conectar a otra señal.
    - Un slot puede conectarse a más de una señal.
 
-    > [!Nota]
-    > Aunque la gran cantidad de widgets y señales son más que suficientes para la mayoría de las aplicaciones, a veces se requieren objetos más personalizados. Con PyQt, esto no es un gran problema, ya que siempre se pueden crear widgets personalizados heredando las propiedades de los predefinidos, o directamente de `QWidget`. También se pueden usar las clases disponibles en `QtCore`.
+> [!Note]
+> Aunque la gran cantidad de widgets y señales son más que suficientes para la mayoría de las aplicaciones, a veces se requieren objetos más personalizados. Con PyQt, esto no es un gran problema, ya que siempre se pueden crear widgets personalizados heredando las propiedades de los predefinidos, o directamente de `QWidget`. También se pueden usar las clases disponibles en `QtCore`.
 
 3. La ejecución del bucle principal se da en un hilo específico (hilo principal de la GUI, etc.). En ocasiones, cuando la respuesta a las acciones de los usuarios requiere largos tiempos de procesamiento, para evitar que se congele la interfaz mientras se ejecutan las tareas, se puede recurrir a hilos adicionales para ejecutarlas en segundo plano sin bloquear la interfaz de usuario principal. Esto se puede hacer utilizando la clase `QThread` para crear y administrar hilos.
 
@@ -134,7 +134,7 @@ Para desarrollar la aplicación, debes tener en cuenta las siguientes pautas [^1
     ```
     Adicionalmente, pueden usarse paquetes que ya definen estilos para toda la aplicación, como por ejemplo [`Qt-Material`](https://pypi.org/project/qt-material/).
 
-    <img src="https://pypi-camo.freetls.fastly.net/87718161642596c241049b2b4948067962758f7f/68747470733a2f2f6769746875622e636f6d2f554e2d47435044532f71742d6d6174657269616c2f7261772f6d61737465722f646f63732f736f757263652f6e6f7465626f6f6b732f5f696d616765732f6461726b2e676966" width="300x">
+    <img src="https://pypi-camo.freetls.fastly.net/87718161642596c241049b2b4948067962758f7f/68747470733a2f2f6769746875622e636f6d2f554e2d47435044532f71742d6d6174657269616c2f7261772f6d61737465722f646f63732f736f757263652f6e6f7465626f6f6b732f5f696d616765732f6461726b2e676966" width="600x">
 
 6. Finalmente, para completar la experiencia de usuario, puedes usar la clase `QPropertyAnimation` de `QtCore` para animar algunas propiedades de los widgets. Esto es útil, por ejemplo, para moverlos en la aplicación u ocultarlos dinámicamente.
 
