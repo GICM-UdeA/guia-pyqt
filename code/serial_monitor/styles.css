@@ -1,0 +1,18 @@
+QWidget{
+	background-color:#000;
+	color:#fff
+}
+
+QPushButton{
+	padding: 2px;
+	border: 1px solid #fff;
+}
+
+QPushButton::hover{
+	background-color: #282828;
+}
+
+QComboBox{
+	background-color: #282828;
+	color: #fff
+}
