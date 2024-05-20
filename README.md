@@ -1,18 +1,17 @@
-- [Guía de PyQt](#guía-de-pyqt)
-  - [¿Qué es Qt?](#qué-es-qt)
-  - [¿Qué es PyQt?](#qué-es-pyqt)
-  - [Primeros Pasos](#primeros-pasos)
-    - [Instalación de PyQt](#instalación-de-pyqt)
-      - [Qt Designer](#qt-designer)
-  - [¿Cómo desarrollar la interfaz?](#cómo-desarrollar-la-interfaz)
-  - [Ejemplos](#ejemplos)
-  - [Aprender más](#aprender-más)
-    - [Enlaces:](#enlaces)
-  - [Último paso - Generar el ejecutable e instalador de la GUI](#último-paso---generar-el-ejecutable-e-instalador-de-la-gui)
-  - [Recursos en linea para el desarrollo](#recursos-en-linea-para-el-desarrollo)
-
 # Guía de PyQt
 Esta guía está diseñada para proporcionar una introducción al desarrollo de aplicaciones GUI (Interfaz Gráfica de Usuario) utilizando PyQt.
+
+- [¿Qué es Qt?](#qué-es-qt)
+- [¿Qué es PyQt?](#qué-es-pyqt)
+- [Primeros Pasos](#primeros-pasos)
+  - [Instalación de PyQt](#instalación-de-pyqt)
+    - [Qt Designer](#qt-designer)
+- [¿Cómo desarrollar la interfaz?](#cómo-desarrollar-la-interfaz)
+- [Ejemplos](#ejemplos)
+- [Aprender más](#aprender-más)
+  - [Enlaces:](#enlaces)
+- [Último paso - Generar el ejecutable e instalador de la GUI](#último-paso---generar-el-ejecutable-e-instalador-de-la-gui)
+- [Recursos en linea para el desarrollo](#recursos-en-linea-para-el-desarrollo)
 
 ## ¿Qué es Qt?
 
@@ -183,7 +182,7 @@ Una vez generado el ejecutable, se puede distribuir la aplicación para su uso. 
 * En [convertico.com](https://convertico.com/es/) podrá crear el icono de su GUI a partir de imagenes. 
 * En [cssgradient.io](https://cssgradient.io/) puede hacer gradientes y obtener el respectivo código css.
 
-> [!Info]
+> [!Tip]
 > El manejo de iconos e imagenes en Qt Designer se hace a tráves de la creación de archivos `.qrc`. Entonces, cuado ya se pasé a trabajar en python, puede generarse un equivalente `.py` para poder importar los recuros a la aplicación.
 > ```bash 
 > pyrcc5 <.qrc FILE> -o <.py FILE>
